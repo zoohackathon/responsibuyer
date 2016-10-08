@@ -253,8 +253,9 @@ a {
     font-size: 0.9rem; } 
 
     .project-input {
-      max-width:70;
+      max-width:70vw;
     }
+
   }
 
 .project-input {
@@ -272,10 +273,11 @@ a {
   background-color: #133c10;
   display: inline-block;
 
-  height: 2rem;
-  width: 2rem;
-  text-align: center;
-  padding-top: .5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  font-size: 1.5rem;
+  position: relative;
+  padding: .25em;
 }
 .arrow-nav {
   width:80vw;
