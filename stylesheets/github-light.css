@@ -25,6 +25,7 @@ SOFTWARE.
 
 .page-header {
   height: 100vh;
+  background-image: url('https://zoohackathon.github.io/responsibuyer/images/splash.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
