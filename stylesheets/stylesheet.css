@@ -277,6 +277,7 @@ a {
   color: #133c10;
   position: absolute;
   bottom: 2vh;
+  font-size: 3rem;
   -webkit-transition-property: color;
 }
 
