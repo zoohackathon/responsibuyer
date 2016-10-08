@@ -23,6 +23,13 @@ SOFTWARE.
 
 */
 
+.page-header {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 .pl-c /* comment */ {
   color: #969896;
 }
