@@ -244,10 +244,19 @@ a {
 
 @media screen and (max-width: 42em) {
   .site-footer {
-    font-size: 0.9rem; } }
+    font-size: 0.9rem; } 
+
+    .project-input {
+      max-width:70;
+    }
+  }
 
 .project-input {
   color: #000;
+}
+
+#locationField {
+  width: 100%;
 }
 
 .search-icon {
