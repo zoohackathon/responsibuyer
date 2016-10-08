@@ -276,7 +276,8 @@ a {
   padding-top: .5rem;
 }
 .arrow-nav {
-  width:100vw;
+  width:80vw;
+  font-size: 3rem;
 }
 
 .arrow-nav-icon {
