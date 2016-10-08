@@ -272,3 +272,16 @@ a {
   text-align: center;
   padding-top: .5rem;
 }
+
+.arrow-nav {
+  color: #133c10;
+  position: absolute;
+  bottom: 2vh;
+  -webkit-transition-property: color;
+}
+
+.arrow-nav:hover {
+  -webkit-transition: #ccd1ca 1s ease-in-out 0s;
+}
+
+
