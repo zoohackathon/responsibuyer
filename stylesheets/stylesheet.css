@@ -249,3 +249,10 @@ a {
 .project-input {
   color: #000;
 }
+
+.search-icon {
+  color: #ccd1ca;
+  background-color: #133c10;
+  border-radius:20px;
+  display: inline-block;
+}
