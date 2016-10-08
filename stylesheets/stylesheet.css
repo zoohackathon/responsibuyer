@@ -258,7 +258,9 @@ a {
   }
 
 .project-input {
-  color: #000;
+  color: rgba(0,0,0,.85);
+  border-radius: 8px;
+  height:2.5rem;
 }
 
 #locationField {
