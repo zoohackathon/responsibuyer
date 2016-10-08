@@ -275,8 +275,11 @@ a {
   text-align: center;
   padding-top: .5rem;
 }
-
 .arrow-nav {
+  width:100vw;
+}
+
+.arrow-nav-icon {
   color: #133c10;
   position: absolute;
   bottom: 2vh;
@@ -284,7 +287,7 @@ a {
   -webkit-transition: all .5s ease-in-out 0s;
 }
 
-.arrow-nav:hover {
+.arrow-nav-icon:hover {
   color: #ccd1ca;
 }
 
