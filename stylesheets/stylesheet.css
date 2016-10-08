@@ -279,6 +279,8 @@ a {
   position: relative;
   padding: .25em;
   border-radius: 8px;
+
+  cursor: pointer;
 }
 .arrow-nav {
   width:80vw;
