@@ -73,7 +73,9 @@ a {
 
 .project-name {
   margin-top: 5rem;
-  margin-bottom: 0.1rem; }
+  margin-bottom: 0.1rem; 
+  color: #374352;
+}
 
 @media screen and (min-width: 64em) {
   .project-name {
