@@ -278,11 +278,11 @@ a {
   position: absolute;
   bottom: 2vh;
   font-size: 3rem;
-  -webkit-transition-property: color;
+  -webkit-transition: all 1s ease-in-out 0s;
 }
 
 .arrow-nav:hover {
-  -webkit-transition: #ccd1ca 1s ease-in-out 0s;
+  color: #cc1dca;
 }
 
 
