@@ -61,10 +61,15 @@ var RSBer = (function(RSBer, $){
        });
   };
 
+  var getLatLong = function() {
+    return autocomplete.getPlace().geometry.location;
+  };
+
   return {
     init: _init,
     geolocate: _geolocate,
-    getNewsfeed: getNewsfeed
+    getNewsfeed: getNewsfeed,
+    getLatLong: getLatLong
   }; 
 
 }(RSBer || {}, jQuery, window.google));
@@ -73,7 +78,8 @@ $(document).on('ready', function(){
   RSBer.init();
 })
 .on('.search-icon', 'click', function(e){
-  console.log('Current lat long:', e.currentTarget());
+  console.log('Current lat long target:', e.currentTarget());
+  console.log('Current lat longs: ', RSBer.getLatLong());
 });
 
 function initRSBer() {
