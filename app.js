@@ -79,6 +79,7 @@ $(document).on('ready', function(){
 .on('click', '.search-icon', function(e){
   var latlong = RSBer.getLatLong();
   window.location.href = '/responsibuyer/search?lat=' + latlong.lat + '&long=' + latlong.lng;
+  console.log('Lat long: ', latlong);
 });
 
 function initRSBer() {
