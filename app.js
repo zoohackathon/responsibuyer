@@ -58,10 +58,25 @@ var RSBer = (function(RSBer, $){
   };
 
   var getLatLong = function() {
+    var place = autocomplete.getPlace();
+    if(typeof place !== 'undefined'){
+      return {
+        lat: autocomplete.getPlace().geometry.location.lat(),
+        lng: autocomplete.getPlace().geometry.location.lng()
+      }
+    }
+    else if(!!navigator && typeof navigator.geolocation !== 'undefined') {
+         navigator.geolocation.getCurrentPosition(function getPosition(position) {
+           return {
+             lat: position.coords.latitude,
+             lng: position.coords.longitude
+           };
+      }); 
+    }
     return {
-      lat: autocomplete.getPlace().geometry.location.lat(),
-      lng: autocomplete.getPlace().geometry.location.lng()
-    } 
+      lat: 50.19755079999999,
+      lng: 9.300948500000004
+    };      
   };
 
   return {
