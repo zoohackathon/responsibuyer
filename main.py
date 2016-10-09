@@ -17,21 +17,26 @@ def search():
     country = location.raw['address']['country']
     country_code = location.raw['address']['country_code']
     cur = conn.cursor()
-    cur.execute("""
-        select p.name, 
-               p.description, 
-               w.genus, 
-               w.species, 
-               w.common_name, 
-               w.conservation_status, 
-               count(*) AS total_trades 
-        from wildlife_trade wt 
-        inner join wildlife w on wt.wildlife_id = w.id 
-        inner join product_category p on wt.product_category_id = p.id 
-        where wt.country_code ilike '{}' 
-        GROUP BY p.name, p.description, w.genus, w.species, w.common_name, w.conservation_status
-        ORDER BY total_trades DESC;
-    """.format(country_code))
+    for _ in range(0,2):
+        # Try the query twice if the connection was closed (e.g. DB restarted).
+        try:
+            cur.execute("""
+                select p.name, 
+                       p.description, 
+                       w.genus, 
+                       w.species, 
+                       w.common_name, 
+                       w.conservation_status, 
+                       count(*) AS total_trades 
+                from wildlife_trade wt 
+                inner join wildlife w on wt.wildlife_id = w.id 
+                inner join product_category p on wt.product_category_id = p.id 
+                where wt.country_code ilike '{}' 
+                GROUP BY p.name, p.description, w.genus, w.species, w.common_name, w.conservation_status
+                ORDER BY total_trades DESC;
+            """.format(country_code))
+        except psycopg2.OperationalError:
+            conn = psycopg2.connect(database='responsibuyer')
     products = []
     rows = cur.fetchall()
     for row in rows:
