@@ -37,7 +37,9 @@
                     <h4>Animals endangered:</h4>
                     <ul class="product-animal-list">
                         {{#each animals}}
-                         <li class="product-animal-list-item" style="background-image:url('images/{{genus}}_{{species}}.jpg');" data-name="{{common_name}}"></li>
+                        <a href="https://en.wikipedia.org/wiki/{{genus}}_{{species}}">
+                            <li class="product-animal-list-item" style="background-image:url('images/{{genus}}_{{species}}.jpg');" data-name="{{common_name}}"></li>
+                        </a>
                         {{/each}}
                     </ul>
                     {{/if}}
