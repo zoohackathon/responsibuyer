@@ -5,27 +5,45 @@
     <title></title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/search.css" media="screen">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Muli" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/handlebars-v4.0.5.js"></script>
 
+    <script src="https://use.fontawesome.com/faf5f5dd46.js"></script>
+    <script src="js/handlebars-v4.0.5.js"></script>
     <script id="accordion-template" type="text/x-handlebars-template">
         <section id="accordion">
-            <a href="index.html"><i class="fa fa-home fa-2x"></i></a>
-            <h1 style="background-color:blue">{{country}}</h1>
+            <div class="title-container">
+                <h1 class="country-header-title">{{country}}</h1>
+                <img src="https://zoohackathon.github.io/responsibuyer/images/{{country_code}}.jpeg">
+            </div>
+            {{#if products}}
+            <h1 >Product Sustainability</h1>
             {{#each products}}
-            <h3>{{name}}</h3>
-            <article>
-                <h4>Description:</h4>
-                <p>{{desc}}</p>
-                {{#if animal_name}}
-                <ul>
-                    {{animal_name}}
-                </ul>
-                {{/if}}
-            </article>
+            <details>
+                <summary>
+                    <div>
+                        <h3 class="section-title">{{name}}</h3>
+                        <h3 class="circle right-aligned value-{{ranking}}">{{ranking}}</h3>
+                    </div>
+                </summary>
+                <article class="product-description">
+                    <h4>Description:</h4>
+                    <p>{{desc}}</p>
+                    {{#if animal_name}}
+                    <h4>Animals endangered:</h4>
+                    <ul>
+                        {{animal_name}}
+                    </ul>
+                    {{/if}}
+                </article>
+            </details>
             {{/each}}
+            {{/if}}
         </section>
     </script>
 
@@ -43,6 +61,12 @@
     </script>
 </head>
 <body>
+<a href="index.html">
+    <h1 class="app-title">
+        <i class="fa fa-home" aria-hidden="true"></i>
+        Responsibuyer
+    </h1>
+</a>
 <div id="main" style="margin-left:100px"/>
 
 <script src="/responsibuyer/app.js"></script>

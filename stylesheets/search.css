@@ -1,8 +1,94 @@
+::-webkit-details-marker { display:none; }
+
 body {
-  background: #fff;
+  background: #f0f0f0;
   color: #374352;
 }
 
-h3 {
+.app-title {
   background: #bfd8d9;
+  color: #374352;
+	padding-left: 10px;
+
+  font-family: 'Amatic SC', cursive;
+}
+
+.section-title {
+	display: inline-block;
+	margin-left: 15px;
+}
+.product-description {
+	margin-left: 25px;
+}
+
+.circle {
+	border-radius: 50%;
+
+	width: 25px;
+	height: 25px;
+	padding: 3px;
+	margin-right: 10px;
+
+	background: #fff;
+	border: 2px solid #666;
+	color: #666;
+	text-align: center;
+
+	font: 14px Arial, sans-serif;
+}
+.value-1, .value-2, .value-3 {
+	border: 2px solid #f03;
+}
+
+.value-4, .value-5, .value-6, .value-7 {
+	border: 2px solid #fc0;
+}
+
+.value-8, .value-9, .value-10 {
+	border: 2px solid #0f0;
+}
+
+.right-aligned {
+	display: inline-block;
+	float: right;
+}
+.title-container {
+	position: relative;
+	overflow: hidden;
+}
+.title-container h1 {
+	padding: 200px;
+	position: relative;
+	z-index: 2;
+}
+.title-container img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: auto;
+	opacity: 0.6;
+}
+.country-header-title {
+  	color: #374352;
+  	margin: 0;
+
+  	font-family: 'Amatic SC', cursive;
+  	font-size: 4rem;
+  	text-align: center;
+}
+
+.country-header-title .bg {
+	opacity: .4;
+}
+
+#accordion {
+	margin-top:2rem;
+	width: 70vw;
+}
+.country-splash-img {
+	border: 6px #fff solid;
+	box-shadow: 4px 4px 32px rgba(0,0,0,.5);
+
+	margin: 2rem;
 }
