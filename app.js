@@ -55,4 +55,8 @@ var placeSearch, autocomplete;
          .fail(function() {
              console.log("error");
          });
+
+       $( "#accordion" ).accordion({
+         collapsible: true
+       });
      });
