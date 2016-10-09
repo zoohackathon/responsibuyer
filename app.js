@@ -3,13 +3,13 @@ var RSBer = (function(RSBer, $){
   var autocomplete;
   var isInit = false;
 
-  var _init = function (){
-    if(!isInit){
+  var _init = function(){
+    if(!isInit && !!window.google){
       autocomplete = new window.google.maps.places.Autocomplete(
            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
            {types: ['geocode']});
+      isInit = true;
     }
-    isInit = true;
   };
 
   var _geolocate = function(){
@@ -56,7 +56,6 @@ var RSBer = (function(RSBer, $){
          console.log("error");
      });
   };
-  
 
   return {
     init: _init,
@@ -70,7 +69,7 @@ $(document).on('ready', function(){
   RSBer.init();
 });
 
-window.initRSBer = function(RSBer){
+function initRSBer() {
   RSBer.init();
 };
 
