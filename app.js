@@ -77,7 +77,7 @@ var RSBer = (function(RSBer, $){
 $(document).on('ready', function(){
   RSBer.init();
 })
-.on('.search-icon', 'click', function(e){
+.on('click', '.search-icon', function(e){
   console.log('Current lat long target:', e.currentTarget());
   console.log('Current lat longs: ', RSBer.getLatLong());
 });
