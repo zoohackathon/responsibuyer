@@ -50,7 +50,8 @@ var RSBer = (function(RSBer, $){
             var entry = entries[index];
             var newsItem = newsTemplate.clone()
             .find('a')
-            .attr('src', entry.link)
+            .attr('href', entry.link)
+            .attr('target', '_blank')
             .text(entry.title);
             newsContainer.append(newsItem);
          }
@@ -62,8 +63,8 @@ var RSBer = (function(RSBer, $){
     var place = autocomplete.getPlace();
     if(typeof place !== 'undefined'){
       return {
-        lat: autocomplete.getPlace().geometry.location.lat(),
-        lng: autocomplete.getPlace().geometry.location.lng()
+        lat: place.geometry.location.lat(),
+        lng: place.geometry.location.lng()
       }
     }
     else if(!!navigator && typeof navigator.geolocation !== 'undefined') {
