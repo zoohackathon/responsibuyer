@@ -52,15 +52,21 @@
             // Replace this placeholder with the content where the post will be displayed
             var mainContent = $("#main");
             // fetch the contents here
-            $.get("test.json", function (data, status, xhr) {
+            var params = window.location.href.split('?')[1];
+            $.ajax({
+              url: "http://responsibuyer.blueb.org:5000/search?" + params,
+              dataType: "jsonp",
+              success: function (data, status, xhr) {
+                console.log(data)
                 var html = template(data);
                 mainContent.append(html);
-            });
+            }
+          });
         });
     </script>
 </head>
 <body>
-<a href="/">
+<a href="/responsibuyer/">
     <h1 class="app-title">
         <i class="fa fa-home" aria-hidden="true"></i>
         Responsibuyer
