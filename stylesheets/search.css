@@ -1,8 +1,27 @@
 body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
   background: #cee5ee;
   color: #374352;
 }
 
+h1 {
+  text-align: center;
+}
 h3 {
   background: #bfd8d9;
+}
+
+ul {
+  text-align: center;
+  border-top: 1px solid black;
+  list-style: none;
+}
+
+li {
+  padding: 10px;
+  display: inline-block;
 }
