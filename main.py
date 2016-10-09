@@ -5,13 +5,7 @@ import psycopg2
 app = Flask(__name__)
 geolocator = Nominatim()
 
-with open('access.json') as f:
-	secrets = json.loads(f.read())
-	user = secrets['pg_user']
-	passwd = secrets['pg_pass']
-	host = secrets['pg_host']
-	db = secrets['pg_db']
-	conn = psycopg2.connect("dbname='{}' user='{}' host='{}' password='{}'".format(db, user, host, passwd))
+conn = psycopg2.connect(database='responsibuyer')
 
 @app.route('/search')
 def search():
