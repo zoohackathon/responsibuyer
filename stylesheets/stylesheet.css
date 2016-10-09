@@ -299,4 +299,15 @@ a {
   color: #9ea33f;
 }
 
+.news-container, .news-item {
+  width: 100%;
+}
+.news-container {
+   background-color: rgba(255,255,255,.75);
+}
+.news-item {
+  display: block;
+  margin: 1em auto;
+}
+
 

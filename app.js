@@ -28,7 +28,7 @@ var RSBer = (function(RSBer, $){
        }
   };
 
-  var getNewsfeed = function(){
+  var getNewsFeed = function(){
      var params = {
          // Request parameters
          "q": "illegal animal trade",
@@ -39,22 +39,23 @@ var RSBer = (function(RSBer, $){
      };
 
      $.ajax({
-         url: "https://api.cognitive.microsoft.com/bing/v5.0/news/search.html?" + $.param(params),
-         beforeSend: function(xhrObj){
-             // Request headers
-             xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","f07fec7721354863a1a6cf6d2a2d05ee");
-         },
-         type: "GET",
-         // Request body
-         data: "{body}",
-     })
-     .done(function(data) {
-         console.log("success");
-         console.log(data);
-     })
-     .fail(function() {
-         console.log("error");
-     });
+      url: "https://ajax.googleapis.com/ajax/services/feed/load?v=2.0&output=json&q=" + encodeURIComponent("http://news.google.com/news?cf=all&hl=en&pz=1&ned=us&q=poaching&output=rss"),
+      dataType: "jsonp",
+      success: function(data) {
+         var entries = data.responseData.feed.entries;
+         var index = 0;
+         var newsTemplate = $('.news-item-template').clone();
+         var newsContainer = $('.news-container');
+         for(index; index < entries.length; index++){
+            var entry = entries[index];
+            var newsItem = newsTemplate.clone()
+            .find('a')
+            .attr('src', entry.link)
+            .text(entry.title);
+            newsContainer.append(newsItem);
+         }
+      }
+    });
   };
 
   var getLatLong = function() {
@@ -82,19 +83,19 @@ var RSBer = (function(RSBer, $){
   return {
     init: _init,
     geolocate: _geolocate,
-    getNewsfeed: getNewsfeed,
+    getNewsFeed: getNewsFeed,
     getLatLong: getLatLong
-  }; 
+  };
 
 }(RSBer || {}, jQuery, window.google));
 
 $(document).on('ready', function(){
   RSBer.init()
-  .getNewsfeed();
+  RSBer.getNewsFeed();
 })
 .on('click', '.search-icon', function(e){
   var latlong = RSBer.getLatLong();
-  window.location.href = '/responsibuyer/search.html?lat=' + latlong.lat + '&long=' + latlong.lng;
+  window.location.href = 'search.html?lat=' + latlong.lat + '&long=' + latlong.lng;
   console.log('Lat long: ', latlong);
 });
 
