@@ -14,9 +14,9 @@ Our submission is for [Challenge #7. Decrease Purchase of Illegal Wildlife Produ
 
 Our approach for satisfying this challenge was to:
 
-- Develop an example Git repository
-- Share it on Github
-- Collect feedback from the community
+- Create an easy to access site for searching based on destination
+- Provide examples of known products that have a negative impact on native wildlife
+- Allow users to look further into the products and the impact had on wildlife populations
 
 Once we did that, we knew we were guaranteed to win!
 
