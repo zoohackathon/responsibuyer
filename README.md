@@ -35,9 +35,8 @@ Our team is comprised of:
 
 We made use of:
 
-- Hand harvested unicorn tears. Unicorns are very happy creatures, its hard to make them cry.
-- [mod_bf](http://modbf.sourceforge.net/)
-- The [Top 1,000 Songs To Hear Before You Die](https://opendata.socrata.com/Fun/Top-1-000-Songs-To-Hear-Before-You-Die/ed74-c6ni) dataset and [API](http://dev.socrata.com/foundry/#/opendata.socrata.com/ed74-c6ni)
+- Flask application for serving data
+- Postgres backend for storage
 
 ## Contributing
 
