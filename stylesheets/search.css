@@ -1,13 +1,31 @@
 body {
-  background: #fff;
+  background: #f0f0f0;
   color: #374352;
 }
 
-h3 {
+.app-title {
   background: #bfd8d9;
   color: #374352;
+
+  font-family: 'Amatic SC', cursive;
 }
 .country-header-title {
-	background: #bfd8d9;
-  color: #374352;
+  	color: #374352;
+  	margin: 0;
+
+  	font-family: 'Amatic SC', cursive;
+  	font-size: 4rem;
+  	text-align: left;
+}
+
+#accordion {
+	margin-top:2rem;
+	width: 70vw;
+}
+
+.country-splash-img {
+	border: 6px #fff solid;
+	box-shadow: 4px 4px 32px rgba(0,0,0,.5);
+
+	margin: 2rem;
 }

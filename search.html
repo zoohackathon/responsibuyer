@@ -11,17 +11,20 @@
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Muli" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<<<<<<< Updated upstream
+
+    <script src="https://use.fontawesome.com/faf5f5dd46.js"></script>
     <script src="js/handlebars-v4.0.5.js"></script>
-=======
   </head>
   <body>
-    <h1 class="country-header-title">Country Name</h1>
->>>>>>> Stashed changes
+    <h1 class="app-title">
+      <i class="fa fa-home" aria-hidden="true"></i>
+      Responsibuyer
+    </h1>
 
     <script id="accordion-template" type="text/x-handlebars-template">
         <section id="accordion">
-            <h1 style="background-color:blue">{{country}}</h1>
+            <h1 class="country-header-title">{{country}}</h1>
+            <img class="country-splash-img" src="/images/{{country_code}}.jpeg"></img>
             {{#each products}}
             <h3>{{name}}</h3>
             <article>
