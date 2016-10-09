@@ -39,7 +39,7 @@ var RSBer = (function(RSBer, $){
      };
 
      $.ajax({
-         url: "https://api.cognitive.microsoft.com/bing/v5.0/news/search?" + $.param(params),
+         url: "https://api.cognitive.microsoft.com/bing/v5.0/news/search.html?" + $.param(params),
          beforeSend: function(xhrObj){
              // Request headers
              xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","f07fec7721354863a1a6cf6d2a2d05ee");
@@ -78,7 +78,7 @@ $(document).on('ready', function(){
 })
 .on('click', '.search-icon', function(e){
   var latlong = RSBer.getLatLong();
-  window.location.href = '/responsibuyer/search?lat=' + latlong.lat + '&long=' + latlong.lng;
+  window.location.href = '/responsibuyer/search.html?lat=' + latlong.lat + '&long=' + latlong.lng;
   console.log('Lat long: ', latlong);
 });
 
