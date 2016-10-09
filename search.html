@@ -37,9 +37,11 @@
                     <h4>Animals endangered:</h4>
                     <ul class="product-animal-list">
                         {{#each animals}}
-                        <a href="https://en.wikipedia.org/wiki/{{genus}}_{{species}}">
-                            <li class="product-animal-list-item" style="background-image:url('images/{{genus}}_{{species}}.jpg');" data-name="{{common_name}}"></li>
-                        </a>
+                         <a href="https://en.wikipedia.org/wiki/{{genus}}_{{species}}">
+                          <li class="product-animal-list-item" style="background-image:url('images/{{genus}}_{{species}}.jpg');" data-name="{{common_name}}">
+                          <p class="product-animal-list-item-name">{{common_name}}</p>
+                         </a>
+                         </li>
                         {{/each}}
                     </ul>
                     {{/if}}
@@ -67,6 +69,7 @@
             }
           });
         });
+        $('.product-animal-list-item')
     </script>
 </head>
 <body>

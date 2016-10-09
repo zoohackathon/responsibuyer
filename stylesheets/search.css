@@ -126,13 +126,27 @@ body {
 	width: 100%;
 }
 .product-animal-list-item {
-	display: inline-block;
+	display: inline-flex;
 	margin-right: 1em;
 
 	width: 100px;
 	height: 100px;
-	border-radius: 20px;
+	border-radius: 60px;
 
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+.product-animal-list-item-name {
+	opacity: 0;
+	background: #fff;
+	color: #374352;
+	border-radius: 60px;
+	width: 100px;
+	height: 100px;
+
+	padding: 1em;
+
+}
+.product-animal-list-item-name:hover{
+	opacity:.75;
+} 
