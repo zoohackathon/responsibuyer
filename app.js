@@ -62,7 +62,10 @@ var RSBer = (function(RSBer, $){
   };
 
   var getLatLong = function() {
-    return autocomplete.getPlace().geometry.location;
+    return {
+      lat: autocomplete.getPlace().geometry.location.lat();
+      lng: autocomplete.getPlace().geometry.location.lng();
+    } 
   };
 
   return {
@@ -78,7 +81,7 @@ $(document).on('ready', function(){
   RSBer.init();
 })
 .on('click', '.search-icon', function(e){
-  console.log('Current lat long target:', e.currentTarget());
+  console.log('Current lat long target:', e.currentTarget);
   console.log('Current lat longs: ', RSBer.getLatLong());
 });
 
