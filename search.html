@@ -17,17 +17,16 @@
     <script src="js/handlebars-v4.0.5.js"></script>
     <script id="accordion-template" type="text/x-handlebars-template">
         <section class="main-content" id="accordion">
-            <div class="title-container" style="background-image:url('images/{{country_code}}.jpeg');">
+            <div class="title-container" style="background-image:url('/images/{{country_code}}.jpeg');">
                 <h1 class="country-header-title" >{{country}}</h1>
             </div>
             {{#if products}}
-            <h1 class="country-product-header">Product Sustainability</h1>
+            <h1 class="country-product-header">Local Goods & Products</h1>
             {{#each products}}
             <details>
                 <summary>
                     <div>
                         <h3 class="product-section-title">{{name}}
-                        <span class="circle right-aligned value-{{ranking}}">{{ranking}}</span>
                         </h3>
                     </div>
                 </summary>
@@ -36,9 +35,9 @@
                     <p>{{desc}}</p>
                     {{#if animals}}
                     <h4>Animals endangered:</h4>
-                    <ul>
+                    <ul class="product-animal-list">
                         {{#each animals}}
-                         <li>{{common_name}}</li>
+                         <li class="product-animal-list-item" style="background-image:url('images/{{genus}}_{{species}}.jpg');" data-name="{{common_name}}"></li>
                         {{/each}}
                     </ul>
                     {{/if}}
@@ -77,6 +76,6 @@
 </a>
 <div id="main"/>
 
-<script src="/responsibuyer/app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
