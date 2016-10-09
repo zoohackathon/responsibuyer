@@ -24,12 +24,12 @@ Once we did that, we knew we were guaranteed to win!
 
 Our team is comprised of:
 
-- [@bonecrushereb](https://github.com/bonecrushereb)
-- [@florean](http://github.com/florean)
-- [@handigarde](http://github.com/handigarde)
-- [@Jaemu](http://github.com/Jaemu)
-- [@wshelor](http://github.com/wshelor)
-- [@mfm24](http://github.com/mfm24)
+- [@bonecrushereb](https://github.com/bonecrushereb) - Benjamin Nolan
+- [@florean](http://github.com/florean) - Nathan Florea
+- [@handigarde](http://github.com/handigarde) - Ryan Handy
+- [@Jaemu](http://github.com/Jaemu) - Jill Handy
+- [@wshelor](http://github.com/wshelor) - Will Shelor
+- [@mfm24](http://github.com/mfm24) - Matt Murfitt
 
 ## Technologies, APIs, and Datasets Utilized
 
