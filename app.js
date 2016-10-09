@@ -63,8 +63,8 @@ var RSBer = (function(RSBer, $){
 
   var getLatLong = function() {
     return {
-      lat: autocomplete.getPlace().geometry.location.lat();
-      lng: autocomplete.getPlace().geometry.location.lng();
+      lat: autocomplete.getPlace().geometry.location.lat(),
+      lng: autocomplete.getPlace().geometry.location.lng()
     } 
   };
 

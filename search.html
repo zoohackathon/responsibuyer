@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/search.css" media="screen">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  </head>
-  <body>
-    <h1 style="background-color:blue">Country Name</h1>
+    <script src="js/handlebars-v4.0.5.js"></script>
 
-    <section id="accordion">
-      <h3>Product Name</h3>
-      <article>
-        <h4>Description:</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate egestas turpis, vel aliquam sem. In hac habitasse platea dictumst. Morbi et vestibulum sem. In sodales purus at leo pretium, non laoreet arcu facilisis. Donec elit arcu, feugiat at libero eu, rhoncus tincidunt purus. Donec imperdiet vel libero non mollis. Nam quis neque hendrerit nunc porttitor finibus.</p>
-        <ul>
-          <li>Animal 1</li>
-          <li>Animal 2</li>
-          <li>Animal 3</li>
-          <li>Animal 4</li>
-        </ul>
-      </article>
+    <script id="accordion-template" type="text/x-handlebars-template">
+        <section id="accordion">
+            <h1 style="background-color:blue">{{country}}</h1>
+            {{#each products}}
+            <h3>{{name}}</h3>
+            <article>
+                <h4>Description:</h4>
+                <p>{{desc}}</p>
+                {{#if animal_name}}
+                <ul>
+                    {{animal_name}}
+                </ul>
+                {{/if}}
+            </article>
+            {{/each}}
+        </section>
+    </script>
 
-      <h3>Product Name 2</h3>
-      <article>
-        <h4>Description:</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate egestas turpis, vel aliquam sem. In hac habitasse platea dictumst. Morbi et vestibulum sem. In sodales purus at leo pretium, non laoreet arcu facilisis. Donec elit arcu, feugiat at libero eu, rhoncus tincidunt purus. Donec imperdiet vel libero non mollis. Nam quis neque hendrerit nunc porttitor finibus.</p>
-        <ul>
-          <li>Animal 1</li>
-          <li>Animal 2</li>
-          <li>Animal 3</li>
-          <li>Animal 4</li>
-        </ul>
-      </article>
-    </section>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var template = Handlebars.compile($('#accordion-template').html());
+            // Replace this placeholder with the content where the post will be displayed
+            var mainContent = $("#main");
+            // fetch the contents here
+            $.get("test.json", function (data, status, xhr) {
+                var html = template(data);
+                mainContent.append(html);
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="main" style="margin-left:100px"/>
 
-    <script src="app.js"></script>
-  </body>
+<script src="app.js"></script>
+</body>
 </html>
