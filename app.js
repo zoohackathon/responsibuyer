@@ -89,7 +89,8 @@ var RSBer = (function(RSBer, $){
 }(RSBer || {}, jQuery, window.google));
 
 $(document).on('ready', function(){
-  RSBer.init();
+  RSBer.init()
+  .getNewsfeed();
 })
 .on('click', '.search-icon', function(e){
   var latlong = RSBer.getLatLong();
