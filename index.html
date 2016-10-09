@@ -16,7 +16,7 @@
       <h2 class="project-tagline">Explore the world.  Leave no trace.</h2>
       <div id="locationField">
         <input id="autocomplete" class="project-input" placeholder="Enter your address"
-           onFocus="geolocate()" type="text" size="40"></input>
+           onFocus="RSBer.geolocate()" type="text" size="40"></input>
         <i class="search-icon fa fa-search" aria-hidden="true"></i>
       </div>
       <div class="arrow-nav">
@@ -28,7 +28,7 @@
       <h3>
 <a id="about" class="anchor" href="#about" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to Responsibuyer</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
+<p></p>
 
 <h3>
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
@@ -58,8 +58,9 @@
 
     </section>
 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
   <script src="https://use.fontawesome.com/faf5f5dd46.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ0d8qUN0w_KxZuX4TuysOd7D3-YF1N3E&libraries=places&callback=initAutocomplete" async defer></script>
-  <script src="/responsibuyer/app.js"></script> 
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ0d8qUN0w_KxZuX4TuysOd7D3-YF1N3E&libraries=places" async defer></script>
+  <script src="app.js"></script> 
   </body>
 </html>
