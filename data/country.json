@@ -1,0 +1,21 @@
+{
+	"data": {
+		"country_code": "US",
+		"country_name": "United States",
+		"products": [
+			{
+				"name":"ivory",
+				"type":"medicinal",
+				"description":"Ivory is sourced from elephants and that's terrible",
+				"animals": [
+					{
+						"name":"Elephant"
+					},
+					{
+						"name":"Rhino"
+					}
+				]
+			}
+		]
+	}
+}
