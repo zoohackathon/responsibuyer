@@ -7,7 +7,11 @@ geolocator = Nominatim()
 
 with open('access.json') as f:
 	secrets = json.loads(f.read())
-	print "User: {}".format(secrets['pg_user'])
+	user = secrets['pg_user']
+	passwd = secrets['pg_pass']
+	host = secrets['pg_host']
+	db = secrets['pg_db']
+	conn = psycopg2.connect("dbname='{}' user='{}' host='{}' password='{}'".format(db, user, host, passwd))
 
 @app.route('/search')
 def search():
