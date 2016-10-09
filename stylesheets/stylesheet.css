@@ -7,7 +7,10 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #606c71; }
+  color: #606c71; 
+
+  overflow-x:hidden;
+}
 
 a {
   color: #1e6bb8;
@@ -56,8 +59,8 @@ a {
 .page-header {
   color: #fff;
   text-align: center;
-  background-color: #159957;
-  background-image: linear-gradient(120deg, #155799, #159957); }
+  background-color: rgba(255,255,255,.5);
+}
 
 @media screen and (min-width: 64em) {
   .page-header {
@@ -72,27 +75,30 @@ a {
     padding: 2rem 1rem; } }
 
 .project-name {
-  margin-top: 5rem;
+  margin-top: 4rem;
   margin-bottom: 0.1rem; 
   color: #374352;
+  font-family: 'Amatic SC', cursive;
 }
 
 @media screen and (min-width: 64em) {
   .project-name {
-    font-size: 3.25rem; } }
+    font-size: 4.25rem; } }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .project-name {
-    font-size: 2.25rem; } }
+    font-size: 4.25rem; } }
 
 @media screen and (max-width: 42em) {
   .project-name {
-    font-size: 1.75rem; } }
+    font-size: 3.75rem; } }
 
 .project-tagline {
   margin-bottom: 2rem;
   font-weight: normal;
-  opacity: 0.7; }
+  opacity: 0.7; 
+  color: #374352;
+}
 
 @media screen and (min-width: 64em) {
   .project-tagline {
@@ -244,10 +250,22 @@ a {
 
 @media screen and (max-width: 42em) {
   .site-footer {
-    font-size: 0.9rem; } }
+    font-size: 0.9rem; } 
+
+    .project-input {
+      max-width:70vw;
+    }
+
+  }
 
 .project-input {
-  color: #000;
+  color: rgba(0,0,0,.85);
+  border-radius: 8px;
+  height:2.5rem;
+}
+
+#locationField {
+  width: 100%;
 }
 
 .search-icon {
@@ -255,8 +273,41 @@ a {
   background-color: #133c10;
   display: inline-block;
 
-  height: 2rem;
-  width: 2rem;
-  text-align: center;
-  padding-top: .5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  font-size: 1.5rem !important;
+  position: relative;
+  padding: .25em;
+  border-radius: 8px;
+
+  cursor: pointer;
 }
+.arrow-nav {
+  width:80vw;
+  font-size: 3rem;
+}
+
+.arrow-nav-icon {
+  color: #133c10;
+  position: absolute;
+  bottom: 2vh;
+  font-size: 3rem;
+  -webkit-transition: all .3s linear 0s;
+}
+
+.arrow-nav-icon:hover {
+  color: #9ea33f;
+}
+
+.news-container, .news-item {
+  width: 100%;
+}
+.news-container {
+   background-color: rgba(255,255,255,.75);
+}
+.news-item {
+  display: block;
+  margin: 1em auto;
+}
+
+
