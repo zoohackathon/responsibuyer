@@ -23,7 +23,7 @@ var RSBer = (function(RSBer, $){
              center: geolocation,
              radius: position.coords.accuracy
            });
-           this.autocomplete.setBounds(circle.getBounds());
+           autocomplete.setBounds(circle.getBounds());
          });
        }
   };
@@ -63,7 +63,7 @@ var RSBer = (function(RSBer, $){
     geolocate: _geolocate,
     getNewsfeed: getNewsfeed
   }; 
-  
+
 }(RSBer || {}, jQuery, window.google));
 
 $(document).on('ready', function(){
