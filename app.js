@@ -55,16 +55,12 @@ var RSBer = (function(RSBer, $){
      .fail(function() {
          console.log("error");
      });
-
-     $( "#accordion" ).accordion({
-         collapsible: true
-       });
   };
 
   var getLatLong = function() {
     return {
-      lat: autocomplete.getPlace().geometry.location.lat();
-      lng: autocomplete.getPlace().geometry.location.lng();
+      lat: autocomplete.getPlace().geometry.location.lat(),
+      lng: autocomplete.getPlace().geometry.location.lng()
     } 
   };
 
