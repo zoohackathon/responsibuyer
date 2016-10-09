@@ -55,10 +55,6 @@ var RSBer = (function(RSBer, $){
      .fail(function() {
          console.log("error");
      });
-
-     $( "#accordion" ).accordion({
-         collapsible: true
-       });
   };
 
   var getLatLong = function() {
