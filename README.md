@@ -10,7 +10,7 @@ Our app is live at http://example.com/awesome-app-that-doesnt-exist. You can log
 
 ## Challenge and Approach
 
-Our submission is for [Challenge #3: Build an app that provides an example of an Awesome Hackathon submission](http://example.com/this-also-goes-nowhere).
+Our submission is for [Challenge #7. Decrease Purchase of Illegal Wildlife Products](https://hackpad.com/Zoohackathon-2016-Problem-Statements-DrI1FDhgStH#:h=7.-Decrease-Purchase-of-Illega).
 
 Our approach for satisfying this challenge was to:
 
