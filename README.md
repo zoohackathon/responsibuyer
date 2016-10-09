@@ -18,8 +18,6 @@ Our approach for satisfying this challenge was to:
 - Provide examples of known products that have a negative impact on native wildlife
 - Allow users to look further into the products and the impact had on wildlife populations
 
-Once we did that, we knew we were guaranteed to win!
-
 ## Team Members
 
 Our team is comprised of:
