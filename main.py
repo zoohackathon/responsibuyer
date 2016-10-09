@@ -28,7 +28,7 @@ def search():
         from wildlife_trade wt 
         inner join wildlife w on wt.wildlife_id = w.id 
         inner join product_category p on wt.product_category_id = p.id 
-        where wt.country_code = '{}' 
+        where wt.country_code ilike '{}' 
         GROUP BY p.name, p.description, w.genus, w.species, w.common_name, w.conservation_status
         ORDER BY total_trades DESC;
     """.format(country_code))
