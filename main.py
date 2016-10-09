@@ -64,7 +64,7 @@ def search():
         animal['trade_count'] = row[6]
         products[product_name]['animals'].append(animal)
     sorted_products = sort_products(list(products.values()))
-    resp['products'] = products
+    resp['products'] = sorted_products
     resp['country'] = country
     resp['country_code'] = country_code
 
