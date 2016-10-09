@@ -47,8 +47,8 @@ We made use of:
 In order to build and run our app:
 
 1. Clone the repository
-2. Build database on schema from docs directory
+2. Build database on `docs/schema.sql`
 3. Unzip data/responsibuyer.sql.gz
 4. `psql responsibuyer < responsibuyer.sql` to populate the database
 
-Our code is licensed under the [MIT License](LICENSE.md). Pull requests will be accepted to this repo, pending review and approval.
+Our code is licensed under the [Apache License](LICENSE.md). Pull requests will be accepted to this repo, pending review and approval.
