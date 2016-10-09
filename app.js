@@ -55,6 +55,10 @@ var RSBer = (function(RSBer, $){
      .fail(function() {
          console.log("error");
      });
+
+     $( "#accordion" ).accordion({
+         collapsible: true
+       });
   };
 
   return {
@@ -72,5 +76,3 @@ $(document).on('ready', function(){
 function initRSBer() {
   RSBer.init();
 };
-
-
