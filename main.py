@@ -86,6 +86,7 @@ def sort_products(products):
         total_animal_count = reduce(lambda x,y:x+y, [x['trade_count'] for x in product['animals']])
         product['ranking'] = total_animal_count
     products.sort(key=lambda x:x['ranking'], reverse=True)
+    return products
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
