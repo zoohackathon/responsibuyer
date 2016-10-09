@@ -10,7 +10,7 @@ Our app is live at http://responsibuyer.blueb.org:5000/. You can also check out 
 
 ## Challenge and Approach
 
-Our submission is for [Challenge #7. Decrease Purchase of Illegal Wildlife Products](https://hackpad.com/Zoohackathon-2016-Problem-Statements-DrI1FDhgStH#:h=7.-Decrease-Purchase-of-Illega).
+Our submission is for [Challenge #7. Decrease Purchase of Illegal Wildlife Products](https://www.wildlabs.net/community/thread/272).
 
 Our approach for satisfying this challenge was to:
 
