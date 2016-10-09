@@ -89,6 +89,12 @@ body {
 .country-splash-img {
 	border: 6px #fff solid;
 	box-shadow: 4px 4px 32px rgba(0,0,0,.5);
-
 	margin: 2rem;
+}
+
+.country-product-header {
+	background-color: #133c10;
+	color: #ccd1ca;
+
+	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
