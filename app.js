@@ -28,7 +28,7 @@ var RSBer = (function(RSBer, $){
        }
   };
 
-  var getNewsfeed = function(){
+  var getNewsFeed = function(){
      var params = {
          // Request parameters
          "q": "illegal animal trade",
@@ -39,10 +39,10 @@ var RSBer = (function(RSBer, $){
      };
 
      $.ajax({
-         url: "https://api.cognitive.microsoft.com/bing/v5.0/news/search.html?" + $.param(params),
+         url: "https://api.cognitive.microsoft.com/bing/v5.0/news/search?q=microsoft&count=10&offset=0&mkt=en-us&safeSearch=Moderate&q=microsoft&count=10&offset=0&mkt=en-us&safeSearch=Moderate",
          beforeSend: function(xhrObj){
              // Request headers
-             xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","f07fec7721354863a1a6cf6d2a2d05ee");
+             xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","9e1f82438f5249efb4a0add36f4fa17c");
          },
          type: "GET",
          // Request body
@@ -61,19 +61,20 @@ var RSBer = (function(RSBer, $){
     return {
       lat: autocomplete.getPlace().geometry.location.lat(),
       lng: autocomplete.getPlace().geometry.location.lng()
-    } 
+    }
   };
 
   return {
     init: _init,
     geolocate: _geolocate,
-    getNewsfeed: getNewsfeed,
+    getNewsFeed: getNewsFeed,
     getLatLong: getLatLong
-  }; 
+  };
 
 }(RSBer || {}, jQuery, window.google));
 
 $(document).on('ready', function(){
+  RSBer.getNewsFeed();
   RSBer.init();
 })
 .on('click', '.search-icon', function(e){
