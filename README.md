@@ -4,7 +4,7 @@ The purpose of this app is to help increase awareness of illegal or harmful prod
 
 This application was developed on October 8th, 2016 for the [Zoohackathon](http://www.zoohackathon.com/).
 
-![Isn't our app beautiful?!](screenshot.jpg)
+![Isn't our app beautiful?!](images/screenshot.jpg)
 
 Our app is live at http://responsibuyer.blueb.org:5000/. You can also check out [this demo screencast](https://www.youtube.com/watch?v=dQw4w9WgXcQ) of our application on YouTube.
 
