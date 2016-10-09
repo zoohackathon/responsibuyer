@@ -35,15 +35,20 @@ Our team is comprised of:
 
 We made use of:
 
+- Webapp with responsive Javascript (details!)
 - Flask application for serving data
 - Postgres backend for storage
+- [IUCN Redlist API](http://apiv3.iucnredlist.org/api/v3/docs) for information on endangered species
+- [Wildlife trade tracker](http://wildlifetradetracker.org/) for information on harmful products
+- [Wikipedia](https://wikipedia.org) for animal descriptions
 
 ## Contributing
 
 In order to build and run our app:
 
-1. Harvest yourself some unicorn tears. They're expensive to purchase on your own.
-2. [Deploy your the code](https://github.com/masylum/Brainfuck-on-Rails) to [Heroku](http://heroku.com)
-3. Profit
+1. Clone the repository
+2. Build database on schema from docs directory
+3. Unzip data/responsibuyer.sql.gz
+4. `psql responsibuyer < responsibuyer.sql` to populate the database
 
 Our code is licensed under the [MIT License](LICENSE.md). Pull requests will be accepted to this repo, pending review and approval.
