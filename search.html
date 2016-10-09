@@ -34,10 +34,12 @@
                 <article class="product-description">
                     <h4>Description:</h4>
                     <p>{{desc}}</p>
-                    {{#if animal_name}}
+                    {{#if animals}}
                     <h4>Animals endangered:</h4>
                     <ul>
-                        {{animal_name}}
+                        {{#each animals}}
+                         <li>{{common_name}}</li>
+                        {{/each}}
                     </ul>
                     {{/if}}
                 </article>
