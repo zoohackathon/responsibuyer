@@ -107,7 +107,8 @@ body {
 
 .country-product-header {
 	background-color: #133c10;
-	color: #ccd1ca;
+	color: #ccd1ca !important;
+	text-align: center;
 
-	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-family: 'Muli', sans-serif;
 }
