@@ -1,4 +1,5 @@
 import json
+from functools import reduce
 
 from flask import Flask, request, json
 from geopy import Nominatim
@@ -40,18 +41,20 @@ def search():
             """.format(country_code))
         except psycopg2.OperationalError:
             conn = psycopg2.connect(database='responsibuyer')
-    products = []
     rows = cur.fetchall()
+    products = {}
     for row in rows:
-        product = {}
-        product['name'] = row[0]
-        product['desc'] = row[1]
-        product['animal_genus'] = row[2]
-        product['animal_species'] = row[3]
-        product['animal_name'] = row[4]
-        product['animal_conservation_status'] = row[5]
-        product['ranking'] = row[6]
-        products.append(product)
+        product_name = row[0]
+        if product_name not in products:
+            products[product_name] = {"name": product_name, 'desc': row[1], 'animals': []}
+        animal = {}
+        animal['genus'] = row[2]
+        animal['species'] = row[3]
+        animal['common_name'] = row[4]
+        animal['conservation_status'] = row[5]
+        animal['trade_count'] = row[6]
+        products[product_name]['animals'].append(animal)
+    sorted_products = sort_products(list(products.values()))
     resp['products'] = products
     resp['country'] = country
     resp['country_code'] = country_code
@@ -66,6 +69,14 @@ def search():
         return response
     else:
         return json.jsonify(resp)
+
+
+def sort_products(products):
+    for product in products:
+        product['animals'].sort(key=lambda x:x['trade_count'], reverse=True)
+        total_animal_count = reduce(lambda x,y:x+y, [x['trade_count'] for x in product['animals']])
+        product['ranking'] = total_animal_count
+    products.sort(key=lambda x:x['ranking'], reverse=True)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
