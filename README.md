@@ -33,7 +33,6 @@ Our team is comprised of:
 
 We made use of:
 
-- Webapp with responsive Javascript (details!)
 - [Flask](http://flask.pocoo.org/) application for serving data
 - Postgres backend for storage
 - [IUCN Redlist API](http://apiv3.iucnredlist.org/api/v3/docs) for information on endangered species
