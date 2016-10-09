@@ -51,4 +51,4 @@ In order to build and run our app:
 3. Unzip data/responsibuyer.sql.gz
 4. `psql responsibuyer < responsibuyer.sql` to populate the database
 
-Our code is licensed under the [Apache License](LICENSE.md). Pull requests will be accepted to this repo, pending review and approval.
+Our code is licensed under the [Apache License](LICENSE). Pull requests will be accepted to this repo, pending review and approval.
