@@ -18,6 +18,12 @@ Our approach for satisfying this challenge was to:
 - Provide examples of known products that have a negative impact on native wildlife
 - Allow users to look further into the products and the impact had on wildlife populations
 
+Going forward, we want to implement the following features to make Responsibuyer more helpful to our users and help promote conservation efforts of animals being poached:
+- Allow users to upload images of examples of products promoting illegal poaching of endangered species
+- Show users a list of local businesses that support local conservation efforts
+- Allow users to input a travel itinerary with a list of destinations
+- Show users ads for non-profits supporting conservation efforts on our list of goods and services to avoid to donate a portion of proceeds to charities fighting illegal poaching
+
 ## Team Members
 
 Our team is comprised of:
