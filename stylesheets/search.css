@@ -1,8 +1,25 @@
 ::-webkit-details-marker { display:none; }
 
+
 body {
   background: #f0f0f0;
   color: #374352;
+
+  font-size: 16px;
+}
+
+.country-header-title {
+  	font-family: 'Amatic SC', cursive;
+  	font-size: 6.5rem;
+  	font-weight: 800 !important;
+  	text-align: center;
+  	z-index: 2;
+
+  	height: 100%;
+  	padding-top: .35em;
+
+  	color: #fff !important;
+    background-color: rgba(55,67,82,.6);
 }
 
 .app-title {
@@ -55,28 +72,25 @@ body {
 .title-container {
 	position: relative;
 	overflow: hidden;
-}
-.title-container h1 {
-	padding: 200px;
-	position: relative;
-	z-index: 2;
-}
-.title-container img {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: auto;
-	opacity: 0.6;
-}
-.country-header-title {
-  	color: #374352;
-  	margin: 0;
+	height:40vh;
 
-  	font-family: 'Amatic SC', cursive;
-  	font-size: 4rem;
-  	text-align: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	border: 6px solid #fff;
+	box-shadow: 4px 4px 32px rgba(0,0,0,.5);
 }
+
+@media screen and (min-width: 42em) {
+  .title-container {
+	    height:60vh;
+	} 
+	.country-header-title {
+		font-size: 10rem;
+		padding-top: .35em;
+	}
+}
+
 
 .country-header-title .bg {
 	opacity: .4;
@@ -84,7 +98,6 @@ body {
 
 #accordion {
 	margin-top:2rem;
-	width: 70vw;
 }
 .country-splash-img {
 	border: 6px #fff solid;

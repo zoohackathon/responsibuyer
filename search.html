@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Responsibuyer</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/search.css" media="screen">
 
@@ -16,10 +16,9 @@
     <script src="https://use.fontawesome.com/faf5f5dd46.js"></script>
     <script src="js/handlebars-v4.0.5.js"></script>
     <script id="accordion-template" type="text/x-handlebars-template">
-        <section id="accordion">
-            <div class="title-container">
-                <h1 class="country-header-title">{{country}}</h1>
-                <img src="https://zoohackathon.github.io/responsibuyer/images/{{country_code}}.jpeg">
+        <section class="main-content" id="accordion">
+            <div class="title-container" style="background-image:url('https://zoohackathon.github.io/responsibuyer/images/{{country_code}}.jpeg');">
+                <h1 class="country-header-title" >{{country}}</h1>
             </div>
             {{#if products}}
             <h1 class="country-product-header">Product Sustainability</h1>
@@ -61,13 +60,13 @@
     </script>
 </head>
 <body>
-<a href="index.html">
+<a href="/">
     <h1 class="app-title">
         <i class="fa fa-home" aria-hidden="true"></i>
         Responsibuyer
     </h1>
 </a>
-<div id="main" style="margin-left:100px"/>
+<div id="main"/>
 
 <script src="/responsibuyer/app.js"></script>
 </body>
