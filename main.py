@@ -1,3 +1,5 @@
+import json
+
 from flask import Flask, request, json
 from geopy import Nominatim
 import psycopg2
@@ -9,6 +11,7 @@ conn = psycopg2.connect(database='responsibuyer')
 
 @app.route('/search')
 def search():
+    global conn
     resp = {}
     lat = request.args.get('lat')
     lon = request.args.get('long')
@@ -16,9 +19,9 @@ def search():
     location = geolocator.reverse(point, language='en')
     country = location.raw['address']['country']
     country_code = location.raw['address']['country_code']
-    cur = conn.cursor()
     for _ in range(0,2):
         # Try the query twice if the connection was closed (e.g. DB restarted).
+        cur = conn.cursor()
         try:
             cur.execute("""
                 select p.name, 
@@ -52,8 +55,17 @@ def search():
     resp['products'] = products
     resp['country'] = country
     resp['country_code'] = country_code
-    return json.jsonify(resp)
 
+    callback = request.args.get('callback')
+    if callback:
+        # Return JSONP
+        json_data = json.dumps(resp)
+        jsonp = "{}({});".format(callback, json_data)
+        response = app.make_response(jsonp)
+        response.mimetype = "application/javascript"
+        return response
+    else:
+        return json.jsonify(resp)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
