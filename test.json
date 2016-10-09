@@ -5,10 +5,10 @@
     {
       "animal_conservation_status": "VU",
       "animal_genus": "acinonyx",
-      "animal_name": "Rhino",
+      "animal_name": "Indian Rhincoeros",
       "animal_species": "jubatus",
-      "desc": "The Rhino, native to Laos, is endangered due to hunting for its horn.  (Note that this is for testing purposes and is not true)",
-      "name": "Rhino horn",
+      "desc": "Ivory is primarily procured through the illegal poaching of Rhincoeros. The Rhincoeros, native to Laos, is endangered due to hunting for its horn.  (Note that this is for testing purposes and is not true)",
+      "name": "Ivory Products",
       "ranking": 1
     },
     {
@@ -16,9 +16,9 @@
       "animal_genus": "acinonyx",
       "animal_name": "Monitor Lizard",
       "animal_species": "jubatus",
-      "desc": "This lizard is invasive, so consuming their tail is great for the wildlife!  (Note that this is for testing purposes and is not true)",
+      "desc": "Used for medicinal purposes, this native remedy is created by crushing the tail of the monitor lizard.  This lizard is invasive, so consuming their tail is great for the wildlife!  (Note that this is for testing purposes and is not true)",
       "name": "Lizard tail",
-      "ranking": 10
+      "ranking": 8
     }
   ]
 }
