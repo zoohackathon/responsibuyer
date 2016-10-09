@@ -36,7 +36,7 @@ Our team is comprised of:
 We made use of:
 
 - Webapp with responsive Javascript (details!)
-- Flask application for serving data
+- [Flask](http://flask.pocoo.org/) application for serving data
 - Postgres backend for storage
 - [IUCN Redlist API](http://apiv3.iucnredlist.org/api/v3/docs) for information on endangered species
 - [Wildlife trade tracker](http://wildlifetradetracker.org/) for information on harmful products
@@ -50,5 +50,6 @@ In order to build and run our app:
 2. Build database on `docs/schema.sql`
 3. Unzip data/responsibuyer.sql.gz
 4. `psql responsibuyer < responsibuyer.sql` to populate the database
+5. `python main.py` to start the webserver
 
 Our code is licensed under the [Apache License](LICENSE). Pull requests will be accepted to this repo, pending review and approval.
